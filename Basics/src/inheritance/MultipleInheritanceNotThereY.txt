@@ -1,0 +1,6 @@
+If a child has 2 parents, this is not allowed
+    -> lets say the parents to be P1 and P2
+    -> P1 and P2 might have some same property, in that case the child would not which one to inherit from whom
+
+Hence, no multiple inheritance in Java 
+

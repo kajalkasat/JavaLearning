@@ -1,0 +1,22 @@
+class se related hota hain
+memory management ke liye hota hain 
+if made a member static, then its copy is created only at class level, not for the objects
+
+if static blocks are there, then static blocks in their code written order would be executed and then main()
+
+static keyword for these members only : variabes, methods, blocks(static block) and nested class 
+
+static CANNOT be used inside non-static inner type 
+
+Top level class cannot be static, nested class can be static 
+    -> why make the inner class static ?
+        -> because, if the inner class is static we can access it like its present outside 
+
+static blocks ? 
+    -> few fields are not initialised inside main(), we want to initialise them by the time we reach main()
+    -> as all the static blocks will be executed before main(), these fields would be initialised
+
+
+
+
+
