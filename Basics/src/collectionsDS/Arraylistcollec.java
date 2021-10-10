@@ -57,7 +57,7 @@ public static void main(String[] args) {
     System.out.println("l1 ka size: "+l1.size());
     System.out.println(l1.contains("def"));
     System.out.println(l1.isEmpty());
-
+    
 
     // Object x[] =  l1.toArray(); // this would return an object, but if we want to convert to string as l1 is string then its below
 
