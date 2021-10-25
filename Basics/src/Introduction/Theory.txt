@@ -48,7 +48,7 @@ For checking if a no. is prime or not :
             }
             return true;
 
-break : comes out of loop and excutes next statements
+break : comes out of loop and executes next statements
             for { 
             if(....)  // if break is there in if condition, then as soon as condn. is met, the for loop terminates
                         and the next lines after for are executed
