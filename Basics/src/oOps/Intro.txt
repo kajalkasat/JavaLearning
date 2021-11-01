@@ -25,7 +25,7 @@ if we keep upating these thinga in a file thro' diff  objects, the object might 
 the data might be stored in unordered manner, so a single should access and update
 
 basically use singleton where a task is repeated, so this has to be managed thro' a single object
-so this object can be used always 
+so this object can be used always
 
 how to implement singleton pattern :
 -> make constructor private

@@ -69,14 +69,7 @@ public class MergeNonOverlappingIntervals {
         for(Interval e : ans)
         {
             System.out.println(e.start + " " + e.end);
-        }
-
-        
-
-
-
-
-
+        } 
 
     }
 }
