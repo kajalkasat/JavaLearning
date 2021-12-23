@@ -3,16 +3,7 @@ package leetcode;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-class intervals
-{
-    int start,end;
-     
-    intervals(int start, int end)
-    {
-        this.start=start;
-        this.end=end;
-    }
-}
+
 public class MergeIntervals {
     public static int[][] merge(int[][] intervals) {
         

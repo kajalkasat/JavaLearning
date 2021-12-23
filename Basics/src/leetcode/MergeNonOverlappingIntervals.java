@@ -37,6 +37,7 @@ public class MergeNonOverlappingIntervals {
             {
                 intervals.add(i,toInsert);
                 break;
+        
             }
             else
             {
@@ -45,8 +46,6 @@ public class MergeNonOverlappingIntervals {
                 intervals.remove(i);
 
             }
-
-
         }
     
         if(i==intervals.size())

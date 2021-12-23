@@ -34,7 +34,7 @@ public class MainClass {
         Demo d = new Demo();
         Demo d1 = new Demo();
         Demo d2 = new Demo();
-
+        
         d.works();
         Demo.notWorks();// which vaibale will be incremented, d or d1 or d2 ?; not known
         

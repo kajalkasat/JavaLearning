@@ -1,6 +1,6 @@
 package oOps.singletonPattern;
 
-public class AppConfig {
+public class AppConfig { 
     
     private AppConfig()
     {
