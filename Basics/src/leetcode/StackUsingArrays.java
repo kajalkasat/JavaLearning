@@ -1,12 +1,13 @@
 package leetcode;
 
-import javax.lang.model.util.ElementScanner14;
+import java.io.*;
+import java.util.*;
 
 /*
 stack : LIFO
 
 daily life examples : plates in the wedding
-
+peek : returns only the top values, thats the only use
 
 */
 class Stack
@@ -20,7 +21,7 @@ class Stack
 
     void push(int v)
     {
-        if(top==4)
+        if(top==4) 
         {
             System.out.println("limit crossed");
             return;
