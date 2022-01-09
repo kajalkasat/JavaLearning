@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.Array;
 public class XorQueries {
     
     static int[] xorQueries(int[] arr, int[][] queries) {

@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.BinarySearch;
 // TC : O(log n) * n
 // as the binary search takes O(logn) and O(n) for traversing the array while placing
 public class AggressiveCows {

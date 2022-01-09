@@ -1,4 +1,4 @@
-package collectionsDS;
+package leetcode.Array;
 
 import java.util.*;
 

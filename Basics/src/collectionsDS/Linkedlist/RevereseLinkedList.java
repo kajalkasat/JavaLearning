@@ -1,4 +1,4 @@
-package leetcode;
+package collectionsDS.Linkedlist;
 class ListNode 
     {
              int val;

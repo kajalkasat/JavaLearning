@@ -1,4 +1,4 @@
-package collectionsDS;
+package collectionsDS.ObjectClass;
 
 import java.util.ArrayList;
 import java.lang.*;

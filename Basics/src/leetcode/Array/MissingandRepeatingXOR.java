@@ -1,4 +1,4 @@
-package collectionsDS;
+package leetcode.Array;
 /*
     1. xor of all nums
     2. xor of 1 to n

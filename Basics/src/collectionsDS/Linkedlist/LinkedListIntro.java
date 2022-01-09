@@ -1,4 +1,4 @@
-package collectionsDS;
+package collectionsDS.Linkedlist;
 
 import java.util.*;
 

@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.Array;
 
 public class MaxConsec1s {
     

@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.Array;
 
 import java.lang.reflect.AnnotatedArrayType;
 import java.util.*;

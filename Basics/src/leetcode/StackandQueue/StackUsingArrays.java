@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.StackandQueue;
 
 import java.io.*;
 import java.util.*;

@@ -1,4 +1,4 @@
-package collectionsDS;
+package collectionsDS.ObjectClass;
 
 /* this pair now accepts 1string 1 integer pair, we might want to lattern add support of double,float to this Pair, 
 we use generics for that case */

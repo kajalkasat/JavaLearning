@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.Recursion;
 
 import java.util.*;
 import java.util.Comparator;

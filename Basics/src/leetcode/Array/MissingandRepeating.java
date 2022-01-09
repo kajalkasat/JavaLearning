@@ -1,4 +1,4 @@
-package leetcode;
+package leetcode.Array;
 public class MissingandRepeating {
 
 	static void printTwoElements(int arr[], int size)

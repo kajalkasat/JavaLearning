@@ -1,4 +1,4 @@
-package collectionsDS.Array;
+package leetcode.Array;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -6,7 +6,7 @@ import java.util.Collections;
 import java.util.LinkedList;
 import java.util.List;
  
-import collectionsDS.Pair;
+import collectionsDS.ObjectClass.Pair;
 
 public class Arraylistcollec {
     
