@@ -1,0 +1,13 @@
+Map doesnt fall under collection interface, map uses <key,value> pair wereas the remaining collection
+use object
+
+interface Map 
+{
+    interface Entry --> entry is every <key,value> pair in map
+    {
+        Object getKey()
+        Object getValue()
+        Object setValue(Obj) 
+    }
+}
+
