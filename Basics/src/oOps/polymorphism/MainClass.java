@@ -42,12 +42,10 @@ public class MainClass {
         1. compile time polymorphism / static polymorphism:
             -> achieved via method overloading
             -> method overloading means same method name different params,
-            -> java determines which consturctor/method based on params of object be called at compile time
+            -> java determines which consturctor/method based on no. of params of object be called at compile time
 
         2. runtime polymorphism / dynamic polymorphism
             -> achieved by method overriding
-            -> 
     */
     }
-    
 }
