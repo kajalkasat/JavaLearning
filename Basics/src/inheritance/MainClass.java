@@ -24,5 +24,21 @@ public class MainClass {
 
         // super class : calls immediate parent class
 
+        /*
+            super keyword : refer kunal's video
+            Types of inheritance:
+            1. Single Inheritance:
+                -> 1 class extends another class
+
+            2. multilevel inheritance : 1->2->3
+
+            3. hierarchial inheritance : many classes(child) inherit from 1 class(parent)
+
+            4. hybrid inheritance : combination of single and multiple inheritance.
+                as multiple inheritance NOT in java, hybrid inheritance also NOT in java
+            
+            5. multiple inheritance : NOT in java
+
+        */
     }   
 }

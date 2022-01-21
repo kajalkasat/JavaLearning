@@ -21,6 +21,8 @@ toString()
         (ObjectClassDSoft.java )
     -> in the wrapper classes, the toString() method is overriden to get proper content output 
     -> in all collection classes,String and String buffer classes, toString() is overriden for meaningful string representation 
+    -> if we override the toString() method, which method whether its our class method / object class method 
+    is determined at runtime
 
 hashCode()
     -> this is NOT address of object(not possible to find this or size of objectin java)
