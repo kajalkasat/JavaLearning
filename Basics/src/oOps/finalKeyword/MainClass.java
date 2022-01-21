@@ -19,6 +19,9 @@ public class MainClass
         
         -> final variable if assigned cannot be reassigned, basically can be assigned once
         -> final variable is called blank, if not initialised like VARFIN_2
+
+        -> finalize : is called when java destroys the object; its a part of garbage collection such that
+        the objects with no reference variable pointing to it, has to be removed
     */
     final int VARFIN_2; // not initialising final here is alright
     
@@ -37,6 +40,8 @@ public class MainClass
     Student2 obj2 = new Student2();
 
     obj1.name = "name2"; // this is allowed only reference changing is not allowed
-    
+    // obj1 = new Student2(); // this is not allowed, when a non-primitive is final, it cannot be reassigned
+
+
     }
 }

@@ -53,7 +53,7 @@ public static void main(String[] args) {
     List<String> l3 = new ArrayList<>();
     l3.add("abcd");
     l3.add("def");
-
+    
     l1.removeAll(l3); // this will remove thode elements from l1, that we pass in l3
     System.out.println(l1);
     System.out.println("l1 ka size: "+l1.size());

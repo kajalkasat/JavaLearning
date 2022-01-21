@@ -27,7 +27,7 @@ public class ArraysasList {
         System.out.println("arraylist format : "+names);
         String []arr = new String[names.size()];
 
-        arr = names.toArray(arr);
+        arr = names.toArray(arr); // names.toArray(arr); // this also works
         System.out.println("arrays.toString: "+Arrays.toString(arr));
 
         // iterating over array
