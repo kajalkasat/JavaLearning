@@ -23,5 +23,13 @@ public class PriorityQue {
 
         // PriorityQueue<Integer> pq1 = new PriorityQueue<Integer>(Collections.reverseOrder()); // this is for max. heap
         
+        PriorityQueue<Integer> pq1 = new PriorityQueue<Integer>((a,b) -> (b-a)); 
+
+        pq1.add(2);
+        pq1.add(7);
+        pq1.add(1);
+        pq1.add(0);
+
+        System.out.println(pq1.size()+" "+pq1.peek());
     }
 }

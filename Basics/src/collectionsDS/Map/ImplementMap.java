@@ -41,5 +41,14 @@ public class ImplementMap {
         }
 
         System.out.println(mp);
+
+        Map<String,Integer> mp1 = new HashMap<String,Integer>();
+        mp1.put("aa",1);
+        mp1.put("aa",2);
+        mp1.put(null, 6);
+        mp1.put("bb",4);
+        System.out.println(mp1.get("aa"));
+        System.out.println(mp1.put("aa",3));
+        System.out.println(mp1.get("aa"));
     }
 }
