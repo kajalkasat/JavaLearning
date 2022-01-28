@@ -1,7 +1,6 @@
 package collectionsDS;
 
-import java.util.Iterator;
-import java.util.ArrayList;
+import java.util.*;
 
 
 
@@ -14,6 +13,7 @@ public class Iterators
         al.add(3);
         al.add(6);
         al.add(9);
+        al.add(10);
 
         Iterator it = al.iterator();
         
