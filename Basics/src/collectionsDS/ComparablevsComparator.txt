@@ -1,4 +1,4 @@
-comparable has default sorting order
+comparable has default sorting order (ascending by default)
 comparator has customised sorting order 
 
 comparable present in java.lang 
