@@ -27,5 +27,10 @@ public class StringMutability {
 
         System.out.println(s4 == s3); // returns true as s4 is in string pool area, and s3 also points to object in string pool area
 
+        String s5 = new String("jcjc");
+        s5.concat("njnjd");
+        s5 += "vfv"; // this will append to the string
+        System.out.println(s5);
+
     }
 }
