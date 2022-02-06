@@ -1,0 +1,5 @@
+3 types of DFS:
+    1. Inorder traversal : left root right 
+    2. preorder traversal : root left right 
+    3. postorder traversal : left right root 
+

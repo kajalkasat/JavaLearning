@@ -96,6 +96,6 @@ public class StringIntro {
 
         /* trim :  removes the trailing spaces in front and end of string*/
         System.out.println("   jcndjcnjdncjd      ".trim()); 
-
+        
     }
 }

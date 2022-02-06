@@ -37,7 +37,7 @@ public class HeapSort {
     }
 
     
-    void maxHeapify(int i)
+    void maxHeapify(int n, int i)
     {
         int largest = i;
         int l = leftIndex(i);
@@ -55,7 +55,7 @@ public class HeapSort {
         if(largest != i)
         {
             swap(arr,i,largest);
-            maxHeapify(largest);
+            maxHeapify(size,largest);
         }
     }
 
@@ -64,7 +64,7 @@ public class HeapSort {
     {
         for(int i = (size-2)/2 ; i>=0 ; i--)
         {
-            maxHeapify(i);
+            maxHeapify(size,i);
         }
     }
 
@@ -75,8 +75,8 @@ public class HeapSort {
         for(int i = size-1 ; i>=1 ; i--)
         {
             swap(arr,0,i);
-            size--;
-            maxHeapify(0);
+            maxHeapify(i,0); // keep heapify(0), and heap size should be reduced, as i is getting decremented, the i-1 position will be considrered 
+                            // and size will be reduced automatically
             
         }
     }
