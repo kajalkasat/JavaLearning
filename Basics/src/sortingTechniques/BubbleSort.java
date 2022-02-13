@@ -4,6 +4,10 @@ import java.util.Scanner;
 
 public class BubbleSort
 {
+    // BubbleSort()
+    // {
+    //     System.out.println("constructor of bubble sort is called");
+    // }
     public static void main(String[] args) {
         
         Scanner sc = new Scanner(System.in);

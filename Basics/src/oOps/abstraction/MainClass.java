@@ -13,6 +13,13 @@ public static void repairCar(Car car) // car is "Car.java" class object
                 wo kese bana, kya hua wo hidden rehta hain matlab complexity hidden 
         
         abstraction is achieved with abstract classes and interfaces
+
+        -> all the absract methods in parent class has to be COMPULSORILY be implemented by child class
+        -> if we make child class as abstract, then optionally we can implement abstract methods
+            from parent
+            -> the child2 class extending child class, will have to implement the missed out abstract methods
+            from parent class
+        
     */
     public static void main(String[] args) {
         
