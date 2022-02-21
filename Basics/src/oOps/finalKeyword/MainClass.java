@@ -22,6 +22,14 @@ public class MainClass
 
         -> finalize : is called when java destroys the object; its a part of garbage collection such that
         the objects with no reference variable pointing to it, has to be removed
+
+        finalize() is called by GC just before collecting object for GC.
+        present in java.lang.Object
+        it provides last chance to cleanup and free any remanining resources
+        cleanup means garbage collector by JVM collects only those ovjects that are created using new 
+        keyword, so if we want to remove objects that are no longer under use and created without new
+        you can destroy those from finalize()
+        
     */
     final int VARFIN_2; // not initialising final here is alright
     

@@ -1,0 +1,36 @@
+rows - tuple
+colums - attributes
+
+aggregate function : 
+COUNT() - count of rows with given condition
+AVG(),SUM() -of the coloums
+MAX(),MIN()
+
+inner join : common between both tables 
+-> SELECT EMPLOYEE.Firstname, EMPLOYEE.Lastname,PROJECT.projectname,PROJECT.Projectid FROM EMPLOYEE INNER JOIN PROJECT ON EMPLOYEE.EMPID = PROJECT.EMPID
+
+full join = left join UNION right join
+
+super key : attricute or set of attributes whoch uniquely indentify each record of the table/relation
+
+candidate key : 
+-> A is proper subset of B : A should be subset of B, B should not be a subset of A
+
+primary key : a candidate key with no null values, uniquely identifies a record 
+
+foreign key : a key that is being referenced from another table, foreign key = pK from the referenced table 
+
+
+highest salarty : select max(salary) from employee;
+secodn highest : select max(salary) from employee where salary <> select max(salary) from employee;
+<> - not equal to
+
+nth highest :
+select id,salary from employee e1 where N-1 = (select count(distinct salary) from employee e2 where e2.salary > e1.salary)
+
+last 3 records :
+
+to get last 3 records : temp = (select * from employee order by emp id desc limit 3)
+
+final ans = select * from temp order by emp id asc;
+query : select * from (select * from employee order by emp id desc limit 3) order by emp id asc;

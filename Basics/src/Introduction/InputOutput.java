@@ -26,5 +26,20 @@ public class InputOutput {
         
         System.out.println(s); 
 
+        String s2 = "21";
+        int i = Integer.valueOf(s2);
+        System.out.println(i);
+
+        char ch = 'c';
+        int c = ch;
+        System.out.println(c);
+
+        int z = 9;
+        Integer wi = Integer.valueOf(z);
+        System.out.println(wi);
+
+        int wq = 40;
+        String news = String.valueOf(wq);
+        System.out.println(news);
     }
 }

@@ -1,6 +1,5 @@
 package collectionsDS.Map;
 
-import java.util.HashMap;
 import java.util.*;
 
 public class ImplementMap {
@@ -50,5 +49,51 @@ public class ImplementMap {
         System.out.println(mp1.get("aa"));
         System.out.println(mp1.put("aa",3));
         System.out.println(mp1.get("aa"));
+
+        // sort a map based on values
+
+        HashMap<String, Integer> hm = new HashMap<String, Integer>();
+ 
+        // enter data into hashmap
+        hm.put("Math", 98);
+        hm.put("Data Structure", 85);
+        hm.put("Database", 91);
+        hm.put("Java", 95);
+        hm.put("Operating System", 79);
+        hm.put("Networking", 80);
+        Map<String, Integer> hm1 = sortByValue(hm);
+
+        for(Map.Entry<String,Integer> mset: hm1.entrySet())
+        {
+            System.out.println(mset.getKey()+" "+mset.getValue());
+        }
     }
+
+    private static Map<String, Integer> sortByValue(HashMap<String, Integer> hm) {
+        
+        Map<String,Integer> ans = new LinkedHashMap<String,Integer>();
+        
+        List<Map.Entry<String,Integer>> l = new LinkedList<Map.Entry<String,Integer>>(hm.entrySet());
+
+        Collections.sort( l, new Comparator<Map.Entry<String,Integer>>() 
+            {
+                public int compare(Map.Entry<String,Integer> o1, Map.Entry<String,Integer> o2) 
+                {
+                    
+                    if(o1.getValue() > o2.getValue())
+                        return 1;
+                    else
+                        return -1;
+                }
+            } 
+        );
+
+        for(Map.Entry<String,Integer> mset: l)
+        {
+            ans.put(mset.getKey(),mset.getValue());
+        }
+        
+        return ans;
+    }
+ 
 }

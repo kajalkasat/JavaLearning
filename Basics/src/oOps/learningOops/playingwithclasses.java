@@ -17,7 +17,7 @@ public class playingwithclasses {
             3. if abstract : we cannot instantiate (create objects of this class)
             4. if final : we cannot extend the class
             5. top level class can be : public, default, abstract, final
-                inner class can be : private, protected, static (this is NOT applicable for top level class)
+                inner class can be : toplevel+ private, protected, static (this is NOT applicable for top level class)
 
             
             1. if the class2 in pack2 is NOT public, we cannot access the public methods from class2
