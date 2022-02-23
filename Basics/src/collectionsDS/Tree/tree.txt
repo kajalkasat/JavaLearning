@@ -3,3 +3,6 @@
     2. preorder traversal : root left right 
     3. postorder traversal : left right root 
 
+children sum property:
+sum of left + right = root value 
+if either child, then child value = root value

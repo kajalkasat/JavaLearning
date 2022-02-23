@@ -66,7 +66,7 @@ public class StringIntro {
         String test2 = "";
         System.out.println(test2.isEmpty());
         System.out.println(test.isEmpty());
-        
+
         System.out.println(test.replace("I", "pp")); // case sesitive is checked
 
         /*  split : if we want to split a string some expression like below 

@@ -23,4 +23,18 @@ public abstract class Car {
     {
         System.out.println("car is honking");
     }
+
+    // inner class in abstract class
+    static abstract class Inner
+    {
+        public void inner1()
+        {
+
+        }
+        public abstract void inner2();
+        public void honk() {
+        }
+
+        
+    }
 }

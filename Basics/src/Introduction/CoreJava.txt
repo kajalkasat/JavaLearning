@@ -51,7 +51,11 @@ exception class                           error class
     2.2 IndexOutOfBoundException
 
 how to create immutable class in java 
-by creating a final class with final members. (methods can be without final)
+by creating a final class.
+make all the members private
+make all the mutable fields final so they cannot be changed
+and as we donot want to return the refernece of the object, return its copy by cloning the object in getter 
+donot provide setters for variables, initialize them thro constructor 
 
 
 how to make an object eligible for garbage collection ?

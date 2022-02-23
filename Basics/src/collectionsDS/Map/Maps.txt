@@ -57,6 +57,25 @@ Map m1 = Collections.synchronizedmap(m);
 thus, m is NOT synchronized, m1 is synchronized
 
 
+Internal working:
+when we intialise a map, and when 1st <key,value> pair is added an array of buckets is created of size 16 (0...15)
+each bucket = node / linkedlist, that stores 
+1.hashcode 
+2.key
+3.value
+4.next
+
+.put(key,value) 
+key is hashed.
+hashcode = hash(key), this hashcode might be very big ans storing key at this value as index is NP
+so, index = hashcode & (n-1) sothat we get a value from 0 to 15 
+
+lets say .put(2,10) return an index 4
+at 4 ---> 121212121,2,10,null
+
+the 'next' is useful when there is a hashcolision, that is 2 key's return the ame hashcode.
+in the case the 'next' of the last exisiting node is modified, and stores the new node being added there
+note: when the key = null, it goes into the 0th bucket, with all values as null except value
 
 
 

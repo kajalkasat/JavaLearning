@@ -4,7 +4,7 @@ import java.util.*;
 
 public class ImplementMap {
     public static void main(String[] args) {
-        HashMap<Integer,Character> mp = new HashMap<Integer,Character>();
+        Map<Integer,Character> mp = new HashMap<Integer,Character>();
         mp.put(1,'A');
         mp.put(3,'B');
         mp.put(19, 'L');

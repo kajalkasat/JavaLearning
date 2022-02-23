@@ -26,3 +26,12 @@ what is fillratio/loadFactor ?
 exhausted, internally a new araylist of different size will be created
 hence the fill ratio of list is 100%
 for set, the fill ratio is 75%
+
+
+internal implementation of set:
+hashset internally implements a map
+when we intialise a set, a map is initialised by default
+hence, like map set also doesnt have get(), as the indexes are based on hashcode of key
+
+set.add() returns a boolean, checking if the key is present, mark is as present else return false 
+

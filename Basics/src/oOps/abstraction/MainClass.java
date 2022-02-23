@@ -39,5 +39,8 @@ public static void repairCar(Car car) // car is "Car.java" class object
                         (same cheezein ek saath rakhi hain; jo closely related hain)
         abstraction : data is hidden for reducimg complexity
     */
+
+    Car c = new Wagonr();
+    c.honk();// to access the concrete method
     }
 }
