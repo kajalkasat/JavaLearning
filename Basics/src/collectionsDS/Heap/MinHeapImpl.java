@@ -44,7 +44,7 @@ class MinHeap
         
         size++;
         arr[size-1] = x; // insert at the end
-        for(int i=size-1 ; i>=0 && arr[parentIndex(i)] > arr[i] ; i++) 
+        for(int i=size-1 ; i>=0 && arr[parentIndex(i)] > arr[i] ; i--) 
         {
             swap(arr,arr[parentIndex(i)],arr[i]);
             i = parentIndex(i); //updating for next iteration, until we reach the last possible location

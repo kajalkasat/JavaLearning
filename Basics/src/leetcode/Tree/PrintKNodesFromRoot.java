@@ -7,8 +7,8 @@ class Node
     int data;
     Node left, right;
     Node(int item)    {
-        data = item;
-        left = right = null;
+        this.data = item;
+        this.left = this.right = null;
     }
 } 
 public class PrintKNodesFromRoot {

@@ -1,5 +1,13 @@
 package oOps.learningOops;
 
+// Class 1
+class A {
+}
+ 
+// Class 2
+class B extends A {
+}
+
 class Parent{
     int a,b;
     Parent()
@@ -7,9 +15,11 @@ class Parent{
 
     }
 
-    public void demo()
+    public A demo()
     {
         System.out.println("parent class demo");
+
+        return new A();
     }
     
 
@@ -25,9 +35,11 @@ class Child extends Parent{
 
     int x,y;
 
-    public void demo()
+    public B demo()
     {
         System.out.println("child class demo");
+        return new B(); // overriden methods with different return types : covariant return types
+        // over here we can have B as return type because B has prop. of A and B
     }
 
     public Child(int x,int y)

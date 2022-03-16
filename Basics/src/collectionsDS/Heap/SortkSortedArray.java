@@ -1,5 +1,6 @@
 package collectionsDS.Heap;
 
+import java.util.Arrays;
 import java.util.PriorityQueue;
 
 public class SortkSortedArray {
@@ -33,5 +34,7 @@ public class SortkSortedArray {
         {
             System.out.print(e+ " ");
         }
+
+        System.out.println(Arrays.toString(arr)); // to print the array directly
     }
 }

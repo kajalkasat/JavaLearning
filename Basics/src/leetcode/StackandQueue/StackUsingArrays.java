@@ -12,7 +12,7 @@ peek : returns only the top values, thats the only use
 */
 class Stack
 {
-    int top = 0;
+    int top;
     int arr[] = new int[5];
     Stack()
     {

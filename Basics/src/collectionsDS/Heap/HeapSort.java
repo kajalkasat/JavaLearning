@@ -43,11 +43,11 @@ public class HeapSort {
         int l = leftIndex(i);
         int r = rightIndex(i);
 
-        if(l<size && arr[largest] < arr[l])
+        if(l<n && arr[largest] < arr[l])
         {
             largest = l;
         }
-        if(r<size && arr[largest] < arr[r])
+        if(r<n && arr[largest] < arr[r])
         {
             largest = r;
         }

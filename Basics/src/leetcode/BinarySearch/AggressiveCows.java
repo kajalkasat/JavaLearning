@@ -20,10 +20,10 @@ public class AggressiveCows {
             }
         }
 
-        if(pc<mid)
-            return false;
-        else
+        if(pc >= cows)
             return true;
+        else
+            return false;
     }
     public static int LargestMinDistance(int arr[], int cows, int n)
     {
