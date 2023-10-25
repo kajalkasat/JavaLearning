@@ -1,0 +1,25 @@
+ArrayList(class) implement List(I) extends Collection(I) 
+
+List:
+-> duplicates are allowed
+-> order of display is as the order of input 
+
+ArrayList:
+-> these are dynamic arrays / resizeable arrays 
+-> default size is 10
+-> list arr = {1,2,3,4,5} (consider this as list definition)
+-> if we want to add 6 to arr : arr.add(6)
+then the new arr will be created and copied element by element into a new array, and then 6 will be appended
+size of new arraylist : (currentsize * (3/2) ) + 1
+-> once this new arr got created, the previous one will be available for garbage collection 
+-> arr.add(null) --> null insertion is possible 
+-> we can insert heterogenous elements (data type of elements can be different) 
+-> pros ; retireving values, as ArrayList(Class) internally implements random access interface(I), so 
+arr.get(1) and arr.get(1000) will both take the same time
+-> cons : insertion and deletion, as it using shift operation arr.add(1,30) will add at 1st index,
+but the remaining indexes are shifted by 1 position, thus making it time consuming
+
+
+
+
+

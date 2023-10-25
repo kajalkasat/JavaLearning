@@ -1,0 +1,64 @@
+Data type:
+    -> Integer : byte -> 8 Bits : value can be -128 to 127
+                short
+                int
+                long
+
+    -> Decimal : float , double
+    -> Character : char 
+    -> Boolean 
+
+    -> non primitive data type: mixing the primitive data type and making this example: string 
+
+' ' - for single Character
+" " - for string 
+
+Type casting:
+        /       \
+    widening     narrowing 
+
+    byte short char int long float double 
+    -----> is called automatic / widening type casting
+    <----- is called manual / narrowing typecasting 
+
+Input taking:
+    import java.util.Scanner
+    Scanner sc = new Scanner(System.in);
+    sc -> object of scanner class , its just a variable 
+    we can use this for taking input : int x = sc.nextint();
+
+Syntax:
+    -> Package/variable names : inTheWorld , loveToProgram (1st word lower case, then camel case) 
+    -> class names : ProgramToAddToGetSum (completely camel case) 
+
+Operators:
+    -> right shift : divides (>> 1, so divides by 2 once)
+    -> left shift : multiply (<< 2, so multiplies by 2 once)
+    -> comparision : returns boolean value ( > , >= , < , <=)
+
+
+For checking if a no. is prime or not :
+    -> every no, will have atleast 1 factor between 1 and sqrt(n) 
+    -> so, for ( i=2 ; i < = sqrt(n) ; i++)  ; i < = sqrt(n) ==== i * i <= n 
+            {
+                    if(n%i==0)
+                    {   return false;
+                        break; }
+            
+            }
+            return true;
+
+break : comes out of loop and executes next statements
+            for { 
+            if(....)  // if break is there in if condition, then as soon as condn. is met, the for loop terminates
+                        and the next lines after for are executed
+            }
+
+
+continue : only skip of loop, when condition is met 
+
+sorting :
+    Arrays.sort(contests, (a, b) -> Integer.compare(b[0],a[0])); //decreasing order
+    Arrays.sort(contests, (a, b) -> Integer.compare(a[0],b[0]); //increasing order
+
+

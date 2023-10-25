@@ -1,0 +1,35 @@
+1. difference between final, finally and finalize 
+    -> final : modifier for classes, methods and variables 
+    -> finally : block assoiated with try catch 
+        try
+        {
+            // risky code
+        }
+        catch (Exception e)
+        {
+            // code handled 
+        }
+        finally{
+            // clean up code
+        }
+    -> finalize : garbage collection 
+
+2. difference between string and string buffer 
+    -> string objects are immutable 
+    -> string buffer objects are mutable 
+
+3. difference between string buffer and string builder 
+    -> string buffer is synchronized and thread safe, only 1 thread can operate on it 
+    when that process is completed only the next thread can be operated on, hence low performance
+    -> string builder is non-synchronized and not thread safe 
+    -> string builder is better performance 
+
+4. difference between interface, abstract class and concrete class 
+    -> interface : when we have no internal implementation idea, but only requirement
+    -> abstract class : when we have partial implementation idea 
+    -> concrete class : when we have full implementation idea 
+
+5. difference between interface and abstract class (VVVV important)
+    -> refer durga video 
+
+

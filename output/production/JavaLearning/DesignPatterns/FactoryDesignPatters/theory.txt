@@ -1,0 +1,15 @@
+multiple subclasses -> return to a class -> and the factory gets the value from this class, hence it also implements
+abstraction for the client between the client factory class & implementation classes 
+
+Used : when we have multiple sub-classes of a super class and based on the input we want to return 1 class instance
+
+removes the instantiation of implementation classes from client code
+client actually sees only the required clean - readable - understandable code 
+
+super class : interface or abstract class or normal class 
+factory class : it has a static method, based on input it returns the instance of sub-class 
+
+why ?
+in future, if we want to modify the super class(abstract class) for adding new methods/members, 
+or adding new implementation classes, we can change the implementation classes and the factory class respectively
+the client code only gives the input for what college it has added

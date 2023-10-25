@@ -1,0 +1,37 @@
+Set(I)
+-> when use set ?
+    -> represent a group of individual objects, where duplicates are not allowed and insertion order is not required.
+-> there are no new methods in SET(I), so we use from COLLECTION(I) methods only
+
+HashSet(C) 
+-> underlying data structure is hashtable 
+-> duplicates NOT allowed
+-> when we insert duplicate, a false is returned from add(), no error/exception is thrown 
+-> objects are inserted based on hashcode of objects 
+-> heterogenous objects (objects of different data type) are ALLOWED 
+-> null insertion is allowed
+-> implements serializable(I), clonable (I) 
+-> BEST FOR SEARCH operation, as the objects are inserted based on hashcode 
+
+only 4 constructors:
+-> HashSet s = new HashSet()
+    -> creates an empty hashset, with default size 16 and default fill ratio / load factor 0.75
+-> HashSet h = new HashSet(int initialCapacity) 
+    -> customised initialCapacity and default fill ratio
+-> HashSet h = new HashSet(int initialCapacity, fload loadFactor)
+-> HashSet h = new HashSet(Collection C)
+
+what is fillratio/loadFactor ?
+-> the default size of an arraylist is 10, when we insert 11th element that is when the 100% of arrraylist is 
+exhausted, internally a new araylist of different size will be created
+hence the fill ratio of list is 100%
+for set, the fill ratio is 75%
+
+
+internal implementation of set:
+hashset internally implements a map
+when we intialise a set, a map is initialised by default
+hence, like map set also doesnt have get(), as the indexes are based on hashcode of key
+
+set.add() returns a boolean, checking if the key is present, mark is as present else return false 
+

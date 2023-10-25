@@ -1,0 +1,36 @@
+ioc : inversion of control 
+
+Consider an interface I1 
+child c1 implements I1 with the unimplemented methods from I1
+child c2 implements I1 with the unimplemented methods from I1
+
+I1 i = new c1(); // parent p = new child 
+i.implementedmethodfromc1();
+
+this way, we are editing the source code each time for the child we want to call
+to make the object self-instantiable we need to use spring framework, so that we donot have to change the source code 
+spring framework manages the object and creates the object 
+
+A config file is created with the classes, and ioc container creates and stores the objects for the classes from config file 
+this is called spring bean ^^
+ioc is basically for creating the object, and then using the getBean("obj name") for accessing the methods
+
+
+
+getbean("objectname stored in ioc container") and we can use this as object for class 
+
+2 types of ioc container :  
+1. bean factory 
+2. application context (more advaned + features of bean factory); nowadays this is only used 
+
+
+@Autowired : used to inject the object of the dependcy class, provided dependency class should have @Component 
+inject the object of the dependcy class : the class which is the implementation class of another interface, it will create 
+an object for it, and initialise the setter method, if we place @Autowired at the time of declaration of 
+object of dependency class 
+if we place before the setter we manually defined, it will initialise the object and call it 
+
+
+
+
+

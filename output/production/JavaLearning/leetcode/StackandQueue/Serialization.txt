@@ -1,0 +1,75 @@
+Serialization : saving the state of an object (value of the object)
+    -> the process of converting Java supported form to File/network supported form 
+
+    -> by which streams can we implement Serialization ?
+        - FOS (file output stream) write binary data to file 
+        - OOS (object output stream) --> OOS.writeObject(o1) means take object & write in binary data
+    
+    O1 --> OOS --> FOS --> File
+
+    -> To be able to serialize an object, the corresponding class must implement "Serializable(I)"
+
+
+Deserialization : reading the saved state 
+    -> the process of converting from File/network supported form to Java supported form
+    (its the viceversa of Serialization)
+
+    -> by which streams can we implement Deserialization ?
+        - FIS (File input stream) --> read from file to binary form 
+        - OIS.read(o1) (Object input stream) --> convert binary form to object form 
+
+    File --> FIS --> OIS --> O1 
+
+Keywords :
+transient :
+-> It is a modifier only for variables 
+-> consider gmail id and pwd, id can be shared anywhere whereas pwd cannot for security reasons 
+-> making pwd transient, JVM ignores this pwd and saved different value for it 
+
+Static vs transient :
+Things to consider : static class ke liye hota hain, Serialization object ke liye hota hain 
+
+-> static is not a part of object state, hence NOT Serializable 
+
+Example:
+Class Dog implements Serializable
+{
+    int i = 10;
+    static int j =20;
+}
+
+Dog d1 = new Dog(); 
+serialize d1(with 3 steps) 
+output : d1.i = 10 comes from Serializable file & 
+        d1.j value = 20, comes from the object value 
+
+Now, consider j like : "transient static int j = 20"
+output : d1.j = 20, as j is static and static not serializable, hence value is not modified in Serialization
+
+final vs transient :
+Things to consider : at compile time only final variable will be replaced with value
+at runtime the final variable not in variable form 
+
+Example :
+final int i = 10;
+int j = 20;
+
+sop(i) --> compiler makes it sop(10) as final variable is replaced by value at compile time 
+sop(j) --> compiler makes it sop(j)
+
+Example : 
+Class Dog implements Serializable
+{
+    int i = 10;
+    final int j =20;
+}
+
+Dog d1 = new Dog(); 
+serialize d1(with 3 steps) 
+output : d1.i = 10 & d1.j = 20
+
+Now, consider j like : "transient final int j = 20" transient doesnt affect as j is final, 
+at compile time it is converted to value, and transient is applicable only for variables
+output : d1.i = 10, d1.j = 20
+
+Moral : making a static or final variable as transient is no use

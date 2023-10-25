@@ -1,0 +1,41 @@
+User uses an application to perform activities in day to day life.
+the application access the hardware like CPU,mouse,keyboard thro' OS
+user to hardware connectivity is OS. 
+
+if we didnot have an OS, then every user has to write new new programs to form the connectivity with hardware
+
+advantages:
+-> resource mgmt : the task manager we use shows what resource uses how much space, this management 
+is done by OS so that all the resources run properly
+-> process mgmt : like opening word, paint, chrome
+-> memory mgmt : managing ram 
+-> storage mgmt : managing the harddisk (file management)
+-> security
+
+types of OS:
+-> batch 
+-> multi programmed
+-> multi tasking
+-> real time OS
+-> distributed
+-> clustered
+-> embedded 
+
+multi programmed:
+-> to have multiple process in RAM 
+-> lets say we have 2 process p1 and p2
+-> cpu will take process p1 complete it and only then take p2, unless process p1 says that I want to go for some input/output
+(non-preemptive)
+-> idleness of cpu is reduced 
+
+multi tasking / time sharing
+-> unlike multi programmed, here p1 will be completed and then only p2, but if p1 wants to go for input/output
+it will execute it later
+-> means it will execute p1 for sometime, then p2 and then will come back for the remaining process of p1 and p2 
+and hence both are completed simultaneously 
+
+Process states:
+this is not what the kernel does, it is for the understanding of the user 
+
+
+

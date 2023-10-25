@@ -1,0 +1,102 @@
+9 key interfaces:
+Collection
+List
+Set
+SortedSet
+NavigableSet
+Queue
+Map
+SortedMap
+NavigableMap
+
+Collection(I)
+-> all the common methods required are present here 
+
+Diff between Collection(I) and Collections(C)
+-> Collections class define utlity methods like sort(), for collection objects
+-> Collections is present in java.util package
+-> Collection is used to represent a group of individual objects as a single entity
+
+Set(I)
+-> want to represent a group of individual objects as a single entity, where duplicates are NOT allowed
+and insertion order NOT required.
+
+SortedSet(I) -> Set(I)
+-> want to represent a group of individual objects as a single entity, where certain sorting order is maintained and 
+duplicates are NOT allowed.
+
+NavigableSet(I) -> SortedSet(I)
+-> contains methods for navigation
+-> implementation class : TreeSet(C)
+
+SortedMap(I) -> Map(I)
+-> want to represent a group of individual objects as a single entity, where certain sorting order of keys is maintained
+
+NavigableMap(I) -> SortedMap(I)
+-> contains method for navigation
+-> implementation class : TreeMap(C)
+
+Legacy characters in collection framework:
+Enumeration(I)
+Dictionary(Abstract class)
+Vector(C)
+Stack(C) 
+Hashtable(C)
+Properties(C)
+
+diff between arraylist(C) and LinkedList(C):
+-> arraylist is best when its retrieval operation, LinkedList is the best when insertion/deletion at middle
+-> in arraylist elements will be stored in consecutive memory loction, hence retrival is easy as it implements random access(I)
+which is a "marker interface"
+-> in LinkedList, elements will NOT be stored in consecutive memory loction, hence retrieval is complex
+
+vector(C)
+-> resizable/growable array 
+-> insertion order is maintained
+-> duplicates allowed
+-> null insertion allowed
+-> heterogenous elements allowed
+-> implements serializable(I), clonable(I) and random access (I)
+-> its synchronized, hence thread-safe
+-> default capacity : 10
+-> when element, is added like arraylist, a new copy of vector is made, then element is added
+size of new vector : double the size of current vector 
+
+-> constructors available:
+Vector v = new Vector();
+Vector v = new Vector(int initial capacity);
+Vector v = new Vector(int initial capacity, int incremental capacity);
+    -> the size of new vector = 2 * cc; lets say our intiial is 100 and we want 3 to 4 extra memory
+    200 as the size will be waste of memory, hence we can provide the amount of incremental we want
+    to avoid "double size" creation of new vector
+    (THIS IS NOT AVAILABLE IN ARRAYYLIST)
+Vector v = new Vector(Collection c) -> creates a vector for the collection 'c'
+
+Stack(C):
+-> constructors available:
+Stack s = new Stack();
+
+s.search(object O) -> returns the offset of the object, else -1 if not found
+offset -> counter of the element from top of the stack, 1,2,3..end of stack
+
+s.push("A");
+s.push("B");
+s.push("C");
+s.search("A"); //  3
+s.search("Z"); // -1
+
+Cursor:
+-> to access elements one by one
+-> 3 types:
+    -> Enumeration 
+        - get elements one by one from legacy collection object
+        - creation : Enumeration e = v.elements() [v-vector, elements() - from vector]
+    -> Iterator
+    -> List Iterator
+
+
+
+
+
+
+

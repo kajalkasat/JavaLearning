@@ -1,0 +1,81 @@
+Map is NOT the child I of Collection, as collection is for group of individual objects 
+and map is for group of pair of object <key,value> pair 
+
+Every <key,value> pair is called entry 
+Duplicate keys NOT allowed, duplicate values allowed
+
+methods in map:
+-> put(key,value) - returns the value of the old object, if not replaced it returns null 
+although, the old value is replaced by the new value 
+
+collection view of map : because these are applied on a map to return set/collection 
+-> Set keySet() - group of keys is unique, hence set 
+-> Collection values() - group of values can be duplicated, hence Collection
+-> Set entrySet() - group of entries is unique, hence set 
+
+interface Map 
+{
+    interface Entry
+    {
+        Object getKey()
+        Object getValue()
+        Object setValue(Obj) 
+    }
+}
+
+entry(I) is defined inside map(I), as entry cannot exist without map
+these 3 methods are entry specific methods, applicable only on entry object 
+
+Properties of map:
+-> internal implementation of Hashtable
+-> insertion based on hashcode of keys 
+-> heterogenous objects
+-> duplicate keys NOT allowed, values allowed
+-> null insertion : allowed for keys only once as it is non-duplicable, for values any times
+-> implements serilizable(I) and clonable(I), NOT random access(I) 
+-> best for searching 
+
+constructors:
+-> HashMap m = new HashMap() 
+    - default capacity = 16
+    - default fill ratio = 0.75
+    - that means when the 75% table of 16 elements (0 to 15 index) is filled, which is 12 elements, 
+    so when we insert the 13th element the size of hashmap becomes 32 (doubled)  
+-> HashMap m = new HashMap(int initial capacity)
+-> HashMap m = new HashMap(int initial capacity, fload fillratio)
+-> HashMap m = new HashMap(Map m1)
+
+HashMap vs Hashtable:
+-> HashMap is not synchronized hence not threadsafe, Hashtable is synchronized hence thread safe
+-> to operate on hashmap threads donot have to wait, hence preformance is high
+    only 1 thread can operate on Hashtable, hence preformance is comparitively low 
+-> null key & value allowed in hashmap, null kindof things not there in Hashtable
+
+By default hahmaps are not synchronized, there is a method to make it synchronized:
+HashMap m = new HashMap():
+Map m1 = Collections.synchronizedmap(m);
+thus, m is NOT synchronized, m1 is synchronized
+
+
+Internal working:
+when we intialise a map, and when 1st <key,value> pair is added an array of buckets is created of size 16 (0...15)
+each bucket = node / linkedlist, that stores 
+1.hashcode 
+2.key
+3.value
+4.next
+
+.put(key,value) 
+key is hashed.
+hashcode = hash(key), this hashcode might be very big ans storing key at this value as index is NP
+so, index = hashcode & (n-1) sothat we get a value from 0 to 15 
+
+lets say .put(2,10) return an index 4
+at 4 ---> 121212121,2,10,null
+
+the 'next' is useful when there is a hashcolision, that is 2 key's return the ame hashcode.
+in the case the 'next' of the last exisiting node is modified, and stores the new node being added there
+note: when the key = null, it goes into the 0th bucket, with all values as null except value
+
+
+

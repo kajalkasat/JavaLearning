@@ -1,0 +1,10 @@
+Bubble sort : agar agla element phele se chota hain, swap kardo : 0th position > 1st position
+                repeat this 
+            what you notice ? 
+            -> elements peeche se sort hote hain (doggy)
+            -> ineffecient , n no of times swap rehta hain for average cases 
+
+Selection sort : isme bhi swap karne hain lekin har iteration pe ek swap
+                    -> min swaps se array sorted hoti hain 
+
+both are O(n*n) but Selection sort has min. swaps, so its more effecient 

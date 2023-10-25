@@ -1,0 +1,23 @@
+Enums are used to represent a group of constants as a single type.
+Eg : enum Pen {
+    reynolds, cello, parker; --> ";" is not mandatory
+}
+
+Internally:
+class Pen{
+
+}
+reynolds, cello, parker :
+-> are all objects of the class Pen 
+-> public static final 
+public static final Pen reynolds = new Pen();
+
+every enum constant is static, hence 
+Pen p = Pen.reynolds
+sysout(p) gives the value inside this constant
+toString() is overriden to give a valid output, by default its set to return the name of the constant 
+
+declaration : inside class, outside class, NOT inside method (throws compile time error)
+
+Inheritance is not applicable to enum, as enum is final and hence cannot be extended
+although enums can implement interfaces

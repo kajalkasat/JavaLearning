@@ -1,0 +1,18 @@
+comparable has default sorting order (ascending by default)
+comparator has customised sorting order 
+
+comparable present in java.lang 
+comparator present in java.util 
+
+comparable : compareTo()
+comparator : compare() and equals()
+public int compare(Object o1, object o2) 
+            -> returns -1 if o1 has to come before o2
+            -> returns 1 if o1 has to come after o2
+            -> returns 0 if equal  
+implementation for equals() is not required, as the equals() is already implemented in Object class 
+
+
+comparable : all wrapper class & String class implements 
+comparator : 2 classes - collator & rule based collator 
+

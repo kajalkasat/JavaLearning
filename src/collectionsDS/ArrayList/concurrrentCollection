@@ -1,0 +1,36 @@
+why?
+    -> collections provide methods like SynchronizedList, SynchronizedMap, etc. 
+    although these provide thread safety, but the capture lock on the entire collection even for read operation, thus reducing performance
+
+    -> In tradition Collection, if 1 thread iterates and other thread performes structural change
+    then ConcurrentModificationException is thrown
+
+-> lets say if use the HashMap and do structural change like while iterating using iterator like we modify the map by putting, then ConcurrentModificationException is thrown
+but with ConcurrentHashMap, same process will not throw any error 
+    -> this is because hashmap and SynchronizedMap capture lock on entire collection and only 1 thread has access to the bucket but the ConcurrentHashMap captures lock bucket wise so multiple thread can capture multiple bucket
+
+few class : ConcurrentHashMap, CoopOnWriteArrayList, CopyOnWriteArraySet
+
+concurrency level : how many threads are allowed to simultaenously use bucket / get lock
+ConcurrentHashMap : by default has 16 buckets and concurrency value = 16
+means 1 lock per bucket by default (can be changed)
+
+
+null is allowed in hashmap but not in ConcurrentHashMap ?
+-> lets say thread T1 checks if the key is present and it fetches the values, at the same time T2 deleted the key, so t1 gets null
+this creates ambiguity that if the key is present / not or the key was made null
+but this is not possible in hashmap, as ConcurrentModification is not allowed, thus deletion is not possible in hashmap
+
+ConcurrentHashMap:
+default size = 16
+default concurreny level = 16 segments
+each segment (0 to 15) acts as independent hashmap, when any operation happens the lock is acquired on the segment and not the entire HashMap.
+
+it can have multiple segment locks called as reentrant lock
+so 2 threads operating on different segments and acquire lock on them independently as they operate on different segment locks
+
+read / get : T1 and T2 can read from SAME/ DIFFERENT segment without blocking each other
+write / put : T1 and T2 can write on DIFFERENT segment without blocking each other
+
+PUT :
+based on segment index <K,V> placed in segment , then based on hashindex placed on the index in the array like hashmap

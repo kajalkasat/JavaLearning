@@ -1,0 +1,147 @@
+Java - James Gosling
+order of specifiers dont matter in java
+
+Object : instance of class
+state and behaviour where state is the instance variable and behaviour is the method of the class 
+
+inheritance: is-a relationship
+
+aggregation : has-a relationship
+
+composition: when an object contains another object, and the contained object cannot exist without the 
+container object 
+composition is a strong relationship whereas aggregation is a weak relationship
+eg: bike has a cover - aggregation
+bike has an engine - composition
+
+when class A extends class B, the super() for parent class B is by default invoked in class A 
+super() and this must always be first statement 
+
+final blank variable:
+if static : can be initialized only in static block
+if not static: can be initialized in constructor 
+
+compile time vs runtime
+compile time identfies the type of object at compile time, hence it has faster execution
+runtime identfies the type of object at runtime, hence its slower
+->runtime polymorphism means method overriding / dynamic binding like upcasting, 
+    methods are overriden data members cannot be overriden
+
+ques 118 important : diff between abstract class and interface
+
+read only class: private member and getters
+write only class: private member and setter
+
+Exception handling:
+-> types of Exception
+    -> checked : checked at compile time. eg: ClassNotFoundException
+    -> unchecked: check at runtime. eg: ArithmeticException
+    -> Error: cause exit of program as these are not recoverable. ef: OutOfMemoryError
+    error is considered as unchecked Exception
+
+checked Exception are not propagated 
+
+
+                    throwable class
+                    (extends)
+exception class                           error class 
+1.ClassNotFoundException
+2.RuntimeException
+    2.1ArithmeticExcetion
+    2.2 IndexOutOfBoundException
+
+how to create immutable class in java 
+by creating a final class.
+make all the members private
+make all the mutable fields final so they cannot be changed
+and as we donot want to return the refernece of the object, return its copy by cloning the object in getter 
+donot provide setters for variables, initialize them thro constructor 
+
+
+how to make an object eligible for garbage collection ?
+-> set all the avalilable references of the object to null
+-> creating islands of isolation:
+
+public class Test{
+
+Test t3;
+
+    main(){
+    Test t1 = new Test();
+    Test t2 = new Test();
+
+    
+        t1 ---> Object in heap for t1
+        t2 --> object in heap for t2
+
+    t1.t3 = t2;
+    t2.t3 = t1;
+
+        t1 ---> (Object in heap as another reference inside it like (t3) for t2)
+        t2 ---> (Object in heap as another reference inside it like (t3) for t1)
+
+    t1 = null;
+    t2 = null;
+
+        (Object in heap as another reference inside it like (t3) for t2 and t1 ) both are left unrefeenced 
+     
+    t1 = t2; 
+
+        hence now t1 and t2 are eligible for GC
+}
+}
+
+-> make the reference variable refer to another object
+
+responsibility of GC:
+-> remove the unrefeenced object references to use the memory efficienlty
+-> it ensures avalilable memory is used efficienlty, DOESNOT gurrante that there will be sufficient 
+memory for the program to run
+
+why chararaay[] is preffered over string to store password ?
+String uses string pool to store the object.
+String stays in the string pool in the area until the garbage is collected. 
+anyone having access to the memory dump can access the access the passwrod, as it stays for a long periods there
+chararaay() gives the us the access to set it to null when we are done with password. hence it provides
+more security.
+
+java.util.Regex
+Interaces : MatchResult
+classes : Mattcher, Pattern, PatternSyntaxException
+
+types of inner classes:
+-> member IC: class inside class and outside method 
+-> local IC : class within method 
+-> anonymous IC: 
+
+interface:
+nested interface: interface declared inside interface or class 
+
+interface inside interface: inside_interface should be public, its static by default 
+interface inside class : inside_interface can be of any access modifier
+class inside interface: inside_class is static 
+
+how do you invoke external process in java ?
+Runtime.getRuntime() -> returns single instance of runtime class from java.lang.Runtime
+Runtime.getRuntime().exec("notepad") // opens notepad
+Runtime.getRuntime.gc() // invokes GC 
+
+streams in java:
+-> byte stream class
+    -> input stream : java.io.Input 
+    -> output stream : java.io.OutPut 
+-> character stream class 
+    -> reader classes : java.io.Reader
+    -> writer classes : java.io.Writer 
+
+serilizable vs externizable:
+serilizable(I) doesnot have any methods; its a marker interface
+it marks object is avalilable for serilization 
+
+serilization is easy to implement but high performance cost 
+
+externizable has 2 methods : writeExternal() and readExternal()
+externization is used to implement serilization, and has better performance
+
+object cloning = shallow copy
+

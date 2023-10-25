@@ -1,0 +1,34 @@
+object : every object has some state and behavior 
+        state - definite things
+        behavior : what it can do 
+        eg: cat = state : fur, eyes, legs , color , breed (data member) 
+                  behavior : walk, meow, run, sleep, purr (methods, these are called functions in c++)
+
+In java, in a code only 1 class can be public and that will be the name of the file
+
+Classes are never stored anywhere in memory
+
+Method calls, reference variables - stored in stack
+objects are stored in heap memory 
+
+Method overloading : same function name, different no of parameters 
+
+Java is pass by value 
+
+Encapsulation : wrapping data + code 
+                data in a class is hidden from other classes 
+
+Singleton pattern : 
+caching : doesnot access the class to read the method again and again, created one object and atleast for a signle session
+stores the data, so access to class to read data again and again is not required
+logging : suppose a use is clicking a button at this time, so data is stred like this button was pressed when where how 
+if we keep upating these thinga in a file thro' diff  objects, the object might not synchorise these 
+the data might be stored in unordered manner, so a single should access and update
+
+basically use singleton where a task is repeated, so this has to be managed thro' a single object
+so this object can be used always
+
+how to implement singleton pattern :
+-> make constructor private
+-> make static object(private) and a static method(public) to return this object 
+

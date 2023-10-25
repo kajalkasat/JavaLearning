@@ -1,0 +1,13 @@
+3 types of DFS:
+    1. Inorder traversal : left root right 
+    2. preorder traversal : root left right 
+    3. postorder traversal : left right root 
+
+children sum property:
+sum of left + right = root value 
+if either child, then child value = root value
+
+Formulas:
+1. Diameter of BT = MAX ( LEFT_SIDE_HEIGHT , RIGHT_SIDE_HEIGHT ) + 1
+
+2.
