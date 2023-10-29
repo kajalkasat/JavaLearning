@@ -68,7 +68,7 @@ public class BuilderPattern {
     
     /*
         why?
-            -> used when we have to send too many arguments to contructor and maintaining the order is difficult
+            -> used when we have to send too many arguments to constructor and maintaining the order is difficult
             -> when we dont want to send all the parameter in object initialisation
                 so we can send only the required parameters, the optional ones are taken care by builder pattern by passing them thro' setter methods 
 
